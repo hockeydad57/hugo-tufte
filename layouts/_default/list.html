@@ -1,11 +1,12 @@
 {{ define "main" }}
 <span class="breadcrumb">{{ partial "breadcrumb.html" . }}</span>
 <h1>{{ .Section | title }}</h1>
+{{ with .Params.subtitle | title | markdownify }}<p class="subtitle">{{ . }}</p>{{ end }}
 
 <section>
     <ul>
         {{ range .Pages }}
-        <li><a href={{ .Permalink }}>{{ with .Date }}{{ .Format "2006-01-02" }} {{ end }}{{ .Title | title }}</a></li>
+        <li><a href={{ .Permalink }}>{{ .Title | title }}{{ with .Date }} ({{ .Format "2006-01-02" }}){{ end }}</a></li>
         {{ end }}
     </ul>
 </section>
