@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Site.Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+
+<section>
+    <ul>
+    {{ range .Site.Sections }}
+    <li><a href="{{ .Permalink }}">{{ .Section | title }}</a></li>
+    {{ end }}
+    </ul>
+</section>
+
+{{ end }}

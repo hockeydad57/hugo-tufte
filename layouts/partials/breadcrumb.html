@@ -1,0 +1,6 @@
+{{ if eq .Parent .Site.Home }}
+<a href="{{ .Site.Home.Permalink }}">Home</a>
+{{ else }}
+{{ partial "breadcrumb.html" .Parent }}
+<a href="{{ .Parent.Permalink }}">{{ .Parent.Section | title }}</a>
+{{ end }}

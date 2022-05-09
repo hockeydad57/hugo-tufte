@@ -1,0 +1,19 @@
+section > form {
+    width: 55%;
+}
+
+/* Properly style header anchors */
+.anchor {
+    color: #ddd !important;
+    vertical-align: top;
+    font-size: 82%;
+    margin-left: 0.2em;
+}
+
+.anchor:hover {
+    color: #111 !important;
+}
+
+.breadcrumb {
+    position: absolute;
+}

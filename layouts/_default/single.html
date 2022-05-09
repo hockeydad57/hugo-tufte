@@ -1,0 +1,6 @@
+{{ define "main" }}
+<span class="breadcrumb">{{ partial "breadcrumb.html" . }}</span>
+<h1>{{ .Title }}</h1>
+{{ with .Params.subtitle | title | markdownify }}<p class="subtitle">{{ . }}</p>{{ end }}
+{{ .Content }}
+{{ end }}
