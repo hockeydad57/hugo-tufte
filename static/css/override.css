@@ -18,3 +18,10 @@ article > h1 {
 .breadcrumb {
     position: absolute;
 }
+
+@media (max-width: 760px) {
+    section > form,
+    article > h1 {
+        width: 100%;
+    }
+}
